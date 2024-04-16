@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+}
+
+photos-element::part(container) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+photos-element::part(photo) {
+  object-fit: cover;
+  height: 256px;
+  width: 256px;
+}
+
+photos-element::part(photo):hover {
+  transform: scale(1.2);
+  transition: transform 100ms ease-in-out;
+}
+
+
+photos-element::part(link) {
+  text-decoration: none;
+  display: block;
+  margin: 32px;
+}
